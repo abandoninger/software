@@ -15,12 +15,18 @@
         #list {
 
         }
-        .detail{
+
+        .detail {
             width: 80% !important;
             min-height: 300px !important;
             overflow: auto !important;
             border-radius: 10px !important;
             border: 3px solid #c2c2c2 !important;
+        }
+
+        .layui-layer-close {
+            padding-right: 10px;
+            padding-top: 50px;
         }
     </style>
 </head>
@@ -58,9 +64,14 @@
 
     </div>
     <script>
+        var layerIndex;
         //            <![CDATA[
         $(function () {
             loadOrder();
+        });
+
+        layui.use('form', function () {
+            var form = layui.form;
         });
 
         // 加载我的订单列表
@@ -74,6 +85,7 @@
                 }
             })
         }
+
         // 将数据渲染进页面
         function appendToPage(items, tbody) {
             $(items).each(function (index, item) {
@@ -84,6 +96,7 @@
                 tr.append($("<td width='100'>" + item.phone + "</td>"));
                 tr.append($("<td width='100'>" + item.addr + "</td>"));
                 tr.append($("<td width='80'>" + item.total + "</td>"));
+
                 var state = item.state;
                 var status;//1:未付款 2:等待发货 3:等待收货 4:订单完成
                 switch (state) {
@@ -105,6 +118,10 @@
                 }
 
                 tr.append($("<td width='100'>" + status + "</td>"));
+
+
+                tr.append($("<td style='display:none;' data-order-id='" + item.id + "'>" + state + "</td>"));
+
 
                 var operter = $("<td ><button onclick='getDetail(" + item.id + ")' class='layui-btn layui-btn-radius layui-btn-primary'>查看详情</button></td>");
                 if (state == 3) {
@@ -129,10 +146,20 @@
                     $(data.data).each(function (index, item) {
                         var tr = $("<tr style='max-height: 200px;'></tr>");
                         tr.append($("<td ><img class='img_responsive' src='" + item.product.image + "'/></td>"));
-                        tr.append($("<td style='text-align: left;width: 200px;'><a style='color: #01AAED;text-decoration: underline;' href='/mall/product/get.html?id="+item.productId+"'>" + item.product.title + "</a></td>"));
+                        tr.append($("<td style='text-align: left;width: 200px;'><a style='color: #01AAED;text-decoration: underline;' href='/mall/product/get.html?id=" + item.productId + "'>" + item.product.title + "</a></td>"));
                         tr.append($("<td>单价：" + item.product.shopPrice + "</td>"));
                         tr.append($("<td>数量：" + item.count + "</td>"));
                         tr.append($("<td>总价：￥" + item.subTotal + "</td>"));
+
+                        $('td[data-order-id]').each(function () {
+                            var orderId = $(this).data('order-id');  // 获取 data-order-id 的值
+                            if (orderId == id) {
+                                if ($(this).text() == 4) {
+                                    tr.append($("<td><button onclick='addComment(" + id + ", " + item.productId + ")' class='layui-btn layui-btn-lg layui-btn-radius layui-btn-danger'>评价</button></td>"));
+                                }
+                            }                   // 输出订单 ID
+                        });
+
                         tbody.append(tr);
                     });
                     table.append(tbody);
@@ -140,9 +167,11 @@
                     layer.open({
                         type: 1,
                         title: false,
-                        closeBtn: 0,
+                        closeBtn: 10,
                         shadeClose: true,
                         skin: 'detail',
+                        area: ['500px', '400px'],
+                        scrollbar: false,
                         content: div.html()
                     });
                 } else {
@@ -151,6 +180,137 @@
             });
         }
 
+        function addComment(orderId, productId) {
+            $.get("existcomment.do?orderId="+orderId+"&"+"productId="+productId,function (data) {
+                console.log(data);
+                if(!data.data || data.data.length === 0){
+                    var formHtml = `
+        <form class="layui-form" id="commentForm" action="insertComment.do">
+            <!-- 创建评论文本框 -->
+            <div class="layui-form-item">
+                <label class="layui-form-label">评论：</label>
+                <div class="layui-input-block">
+                    <textarea id="txt" name="comment" required lay-verify="required" placeholder="请输入您的评论"
+                              class="layui-textarea"></textarea>
+                </div>
+            </div>
+
+            <!-- 创建打分控件 -->
+            <div class="layui-form-item">
+                <label class="layui-form-label">评分：</label>
+                <div class="layui-input-block">
+                    <select id="score" name="score" lay-verify="required">
+                        <option value="5">5 分</option>
+                        <option value="4">4 分</option>
+                        <option value="3">3 分</option>
+                        <option value="2">2 分</option>
+                        <option value="1">1 分</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- 创建提交按钮 -->
+            <div class="layui-form-item">
+                <div class="layui-input-block" style="text-align: right;">
+                    <input type="hidden" name="orderId" value="${orderId}"> <!-- 隐藏的订单 ID -->
+                    <input type="hidden" name="productId" value="${productId}"> <!-- 隐藏的产品 ID -->
+                    <button type="button" class="layui-btn layui-btn-lg layui-btn-radius layui-btn-primary" onclick="submitComment(${orderId}, ${productId})">提交评论</button>
+                </div>
+            </div>
+        </form>
+    `;
+
+                    layerIndex = layer.open({
+                        type: 1,
+                        title: false,
+                        closeBtn: 10,
+                        shadeClose: true,
+                        area: ['500px', '350px'],
+                        scrollbar: false,
+                        content: formHtml,
+                        success: function (layero, index) {
+                            // 初始化 layui 表单
+                            layui.form.render();
+                        }
+                    });
+                }
+                else{
+                    layer.msg("您已经评价过该商品");
+                }
+            });
+
+        }
+
+
+        function submitComment(orderId, productId) {
+            console.log("111");
+            var form = layui.form;
+            var comment = $("#txt").val();
+            var rating = $("#score").val();
+            console.log(comment + rating);
+
+            if (comment && rating) {
+                // 在这里可以进行 AJAX 请求或其他处理
+                $.ajax({
+                    url: 'insertComment.do',  // 替换为你的后端接口 URL
+                    type: 'POST',
+                    data: {
+                        orderId: orderId,
+                        productId: productId,
+                        comment: comment,
+                        score: rating
+                    },
+                    success: function (response) {
+                        // 处理成功响应
+                        if (response === "success") {
+                            layer.msg("感谢您的评论! Order ID: " + orderId + ", Product ID: " + productId);
+                            layer.close(layerIndex);
+                        } else {
+                            layer.msg("提交评论失败，请重试！");
+                        }
+                    },
+                    error: function (xhr, status, error) {
+                        // 处理错误响应
+                        layer.msg("提交评论失败，请重试！");
+                    }
+                });
+            } else {
+                layer.msg("请填写评论并选择评分！");
+            }
+            // 验证表单
+            // form.on('submit(commentForm)', function(data) {
+            //     // 获取评论内容和评分
+            //     var comment = data.field.comment;
+            //     var rating = data.field.score;
+            //
+            //     if (comment && rating) {
+            //         // 在这里可以进行 AJAX 请求或其他处理
+            //         layer.msg("感谢您的评论! Order ID: " + orderId + ", Product ID: " + productId);
+            //         layer.close(layerIndex);
+            //     } else {
+            //         layer.msg("请填写评论并选择评分！");
+            //     }
+            //
+            //     return false; // 阻止表单的默认提交行为
+            // });
+
+            // 触发表单验证
+            // layui.form.submit('commentForm', 'formDemo');
+        }
+
+        // function submitComment(orderId,productId) {
+        //     // 获取评论内容和评分
+        //     var comment = $("#txt").val();
+        //     var rating = $("#score").val();
+        //     // if (comment && rating) {
+        //     //     // 在此处可以添加 AJAX 请求或其他逻辑来提交评论和评分
+        //     //     // alert(comment + rating);
+        //     //     layer.msg("感谢您的评论!"+orderId+productId);
+        //     //     layer.close(layerIndex);
+        //     // } else {
+        //     //     alert("请填写评论并选择评分！");
+        //     // }
+        // }
         //付款
         function pay(id) {
             $.get("pay.do?orderId=" + id, function (data) {
@@ -158,7 +318,7 @@
                     layer.msg("付款成功！");
                     window.setTimeout(function () {
                         window.location.reload();
-                    },500);
+                    }, 500);
                 } else {
                     layer.msg(data.message);
                 }
@@ -169,13 +329,13 @@
         //确认收货
         function recieve(id) {
             layer.confirm('您确认已经收到货了吗？', {
-                btn: ['确定','取消'] //按钮
-            }, function(){
+                btn: ['确定', '取消'] //按钮
+            }, function () {
                 $.get("receive.do?orderId=" + id, function (data) {
                     if (data.state == 0) {
                         window.setTimeout(function () {
                             window.location.reload();
-                        },500);
+                        }, 500);
                     } else {
                         layer.msg(data.message);
                     }

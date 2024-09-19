@@ -7,10 +7,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import priv.jesse.mall.entity.Classification;
+import priv.jesse.mall.entity.Comment;
 import priv.jesse.mall.entity.OrderItem;
 import priv.jesse.mall.entity.Product;
 import priv.jesse.mall.entity.pojo.ResultBean;
 import priv.jesse.mall.service.ClassificationService;
+import priv.jesse.mall.service.CommentService;
 import priv.jesse.mall.service.ProductService;
 import priv.jesse.mall.service.ShopCartService;
 
@@ -27,6 +29,16 @@ public class ProductController {
     private ClassificationService classificationService;
     @Autowired
     private ShopCartService shopCartService;
+
+    @Autowired
+    private CommentService commentService;
+
+    @RequestMapping("/getComment.do")
+    @ResponseBody
+    public ResultBean<List<Comment>> getComment(int id){
+        List<Comment> comment =commentService.findByProductId(id);
+        return new ResultBean<>(comment);
+    }
 
     /**
      * 获取商品信息
@@ -50,7 +62,9 @@ public class ProductController {
     @RequestMapping("/get.html")
     public String toProductPage(int id, Map<String, Object> map) {
         Product product = productService.findById(id);
+//        List <Comment> comment = commentService.findByProductId(id);
         map.put("product", product);
+//        map.put("comment", comment);
         return "mall/product/info";
     }
 
@@ -94,7 +108,7 @@ public class ProductController {
     }
 
     @RequestMapping("/toCart.html")
-    public String toCart(){
+    public String toCart() {
         return "mall/product/cart";
     }
 
@@ -132,12 +146,13 @@ public class ProductController {
 
     /**
      * 根据一级分类查询它所有的二级分类
+     *
      * @param cid
      * @return
      */
     @ResponseBody
     @RequestMapping("/getCategorySec.do")
-    public ResultBean<List<Classification>> getCategorySec(int cid){
+    public ResultBean<List<Classification>> getCategorySec(int cid) {
         List<Classification> list = classificationService.findByParentId(cid);
         return new ResultBean<>(list);
     }
@@ -172,6 +187,7 @@ public class ProductController {
 
     /**
      * 查看购物车商品
+     *
      * @param request
      * @return
      */

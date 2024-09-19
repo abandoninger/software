@@ -4,9 +4,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import priv.jesse.mall.entity.Comment;
 import priv.jesse.mall.entity.Order;
 import priv.jesse.mall.entity.OrderItem;
 import priv.jesse.mall.entity.pojo.ResultBean;
+import priv.jesse.mall.service.CommentService;
 import priv.jesse.mall.service.OrderService;
 
 import javax.servlet.http.HttpServletRequest;
@@ -19,7 +21,8 @@ import java.util.List;
 public class OrderController {
     @Autowired
     private OrderService orderService;
-
+    @Autowired
+    private CommentService commentService;
     /**
      * 打开订单列表页面
      *
@@ -72,6 +75,35 @@ public class OrderController {
                        HttpServletRequest request,
                        HttpServletResponse response) throws Exception {
         orderService.submit(name, phone, addr, request, response);
+    }
+
+    @RequestMapping("insertComment.do")
+    @ResponseBody
+    public String insertComment(String comment,
+                              Integer score,
+                              Integer productId,
+                              Integer orderId
+                              ) throws Exception{
+        System.out.println(comment);
+        System.out.println(score);
+        System.out.println(productId);
+        System.out.println(orderId);
+        commentService.insertComment( comment,
+                score,
+                productId,
+                orderId);
+        return "success";
+//        response.sendRedirect("/mall/order/toList.html");
+//要处理http请求,并且插入到数据库
+    };
+
+
+    @RequestMapping("existcomment.do")
+    @ResponseBody
+    public ResultBean<List<Comment>> existcomment(Integer orderId, Integer productId){
+        List<Comment>comments=commentService.existcomment(orderId,productId);
+        System.out.println(comments);
+        return new ResultBean<>(comments);
     }
 
     /**

@@ -55,5 +55,14 @@ user表：（用户表）
 	电话：phone
 	地址：addr
 
+comment表：
+	id:id
+	orderId: 订单Id
+	productId: 商品Id
+	content:评论内容
+
 
 说明：购物车中的数据写在session中，位于service中的impl文件夹中，其他的dao也写在下面，用到了 jps，简写或不用写sql语句
+
+
+

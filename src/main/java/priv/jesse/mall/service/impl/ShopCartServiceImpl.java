@@ -10,11 +10,7 @@ import priv.jesse.mall.service.ShopCartService;
 import priv.jesse.mall.service.exception.LoginException;
 
 import javax.servlet.http.HttpServletRequest;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * @author hfb
@@ -44,6 +40,13 @@ import java.util.Map;
             request.getSession().setAttribute(NAME_PREFIX + loginUser.getId(), productIds);
         }
         productIds.add(productId);
+        Enumeration<String> attributeNames = request.getSession().getAttributeNames();
+        while (attributeNames.hasMoreElements()) {
+            String attributeName = attributeNames.nextElement();
+            System.out.println(attributeName);
+            System.out.println(request.getSession().getAttribute(attributeName));
+        }
+
     }
 
     /**

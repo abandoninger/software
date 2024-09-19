@@ -112,3 +112,161 @@
 2024-09-16 16:41:40.142 [restartedMain] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
 2024-09-16 16:41:40.145 [restartedMain] INFO  priv.jesse.mall.MallApplication - Started MallApplication in 1.528 seconds (JVM running for 46.475)
 2024-09-16 16:41:52.062 [Thread-26] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-2} closed
+2024-09-16 21:19:31.167 [restartedMain] INFO  priv.jesse.mall.MallApplication - Starting MallApplication on LAPTOP-OAFG8JQ2 with PID 9308 (E:\mygithub\software\target\classes started by abandon in E:\mygithub\software)
+2024-09-16 21:19:31.169 [restartedMain] DEBUG priv.jesse.mall.MallApplication - Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+2024-09-16 21:19:31.169 [restartedMain] INFO  priv.jesse.mall.MallApplication - No active profile set, falling back to default profiles: default
+2024-09-16 21:19:31.260 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.3.5.Final
+2024-09-16 21:19:32.322 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2024-09-16 21:19:32.323 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.23
+2024-09-16 21:19:32.385 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/mall] - Initializing Spring embedded WebApplicationContext
+2024-09-16 21:19:33.035 [restartedMain] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2024-09-16 21:19:33.074 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.0.12.Final}
+2024-09-16 21:19:33.074 [restartedMain] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2024-09-16 21:19:33.075 [restartedMain] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+2024-09-16 21:19:33.105 [restartedMain] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2024-09-16 21:19:33.781 [restartedMain] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2024-09-16 21:19:33.787 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2024-09-16 21:19:33.991 [restartedMain] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate - HHH000228: Running hbm2ddl schema update
+2024-09-16 21:19:35.013 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2024-09-16 21:19:35.017 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2024-09-16 21:19:35.027 [restartedMain] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2024-09-16 21:19:35.039 [restartedMain] INFO  priv.jesse.mall.MallApplication - Started MallApplication in 4.004 seconds (JVM running for 4.957)
+2024-09-16 21:20:19.983 [Thread-9] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2024-09-16 21:20:22.464 [restartedMain] INFO  priv.jesse.mall.MallApplication - Starting MallApplication on LAPTOP-OAFG8JQ2 with PID 24920 (E:\mygithub\software\target\classes started by abandon in E:\mygithub\software)
+2024-09-16 21:20:22.466 [restartedMain] DEBUG priv.jesse.mall.MallApplication - Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+2024-09-16 21:20:22.466 [restartedMain] INFO  priv.jesse.mall.MallApplication - No active profile set, falling back to default profiles: default
+2024-09-16 21:20:22.541 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.3.5.Final
+2024-09-16 21:20:23.484 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2024-09-16 21:20:23.485 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.23
+2024-09-16 21:20:23.547 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/mall] - Initializing Spring embedded WebApplicationContext
+2024-09-16 21:20:24.172 [restartedMain] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2024-09-16 21:20:24.201 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.0.12.Final}
+2024-09-16 21:20:24.201 [restartedMain] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2024-09-16 21:20:24.202 [restartedMain] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+2024-09-16 21:20:24.218 [restartedMain] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2024-09-16 21:20:24.847 [restartedMain] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2024-09-16 21:20:24.852 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2024-09-16 21:20:25.036 [restartedMain] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate - HHH000228: Running hbm2ddl schema update
+2024-09-16 21:20:26.041 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2024-09-16 21:20:26.044 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2024-09-16 21:20:26.050 [restartedMain] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2024-09-16 21:20:26.062 [restartedMain] INFO  priv.jesse.mall.MallApplication - Started MallApplication in 3.713 seconds (JVM running for 4.526)
+2024-09-16 21:21:31.324 [Thread-9] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2024-09-16 21:21:33.510 [restartedMain] INFO  priv.jesse.mall.MallApplication - Starting MallApplication on LAPTOP-OAFG8JQ2 with PID 9620 (E:\mygithub\software\target\classes started by abandon in E:\mygithub\software)
+2024-09-16 21:21:33.512 [restartedMain] DEBUG priv.jesse.mall.MallApplication - Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+2024-09-16 21:21:33.512 [restartedMain] INFO  priv.jesse.mall.MallApplication - No active profile set, falling back to default profiles: default
+2024-09-16 21:21:33.586 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.3.5.Final
+2024-09-16 21:21:34.552 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2024-09-16 21:21:34.552 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.23
+2024-09-16 21:21:34.611 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/mall] - Initializing Spring embedded WebApplicationContext
+2024-09-16 21:21:35.252 [restartedMain] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2024-09-16 21:21:35.279 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.0.12.Final}
+2024-09-16 21:21:35.279 [restartedMain] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2024-09-16 21:21:35.280 [restartedMain] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+2024-09-16 21:21:35.296 [restartedMain] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2024-09-16 21:21:35.916 [restartedMain] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2024-09-16 21:21:35.921 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2024-09-16 21:21:36.104 [restartedMain] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate - HHH000228: Running hbm2ddl schema update
+2024-09-16 21:21:37.124 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2024-09-16 21:21:37.128 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2024-09-16 21:21:37.134 [restartedMain] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2024-09-16 21:21:37.145 [restartedMain] INFO  priv.jesse.mall.MallApplication - Started MallApplication in 3.758 seconds (JVM running for 4.594)
+2024-09-16 21:21:55.235 [Thread-9] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2024-09-16 21:22:32.708 [restartedMain] INFO  priv.jesse.mall.MallApplication - Starting MallApplication on LAPTOP-OAFG8JQ2 with PID 14492 (E:\mygithub\software\target\classes started by abandon in E:\mygithub\software)
+2024-09-16 21:22:32.710 [restartedMain] DEBUG priv.jesse.mall.MallApplication - Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+2024-09-16 21:22:32.710 [restartedMain] INFO  priv.jesse.mall.MallApplication - The following profiles are active: local
+2024-09-16 21:22:32.782 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.3.5.Final
+2024-09-16 21:22:33.707 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2024-09-16 21:22:33.707 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.23
+2024-09-16 21:22:33.765 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/mall] - Initializing Spring embedded WebApplicationContext
+2024-09-16 21:22:34.414 [restartedMain] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2024-09-16 21:22:34.442 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.0.12.Final}
+2024-09-16 21:22:34.443 [restartedMain] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2024-09-16 21:22:34.443 [restartedMain] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+2024-09-16 21:22:34.460 [restartedMain] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2024-09-16 21:22:35.065 [restartedMain] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2024-09-16 21:22:35.070 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2024-09-16 21:22:35.241 [restartedMain] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate - HHH000228: Running hbm2ddl schema update
+2024-09-16 21:22:36.230 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2024-09-16 21:22:36.234 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2024-09-16 21:22:36.239 [restartedMain] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2024-09-16 21:22:36.250 [restartedMain] INFO  priv.jesse.mall.MallApplication - Started MallApplication in 3.666 seconds (JVM running for 4.457)
+2024-09-16 21:22:58.623 [Thread-9] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2024-09-16 23:11:55.339 [restartedMain] INFO  priv.jesse.mall.MallApplication - Starting MallApplication on LAPTOP-OAFG8JQ2 with PID 3884 (E:\mygithub\software\target\classes started by abandon in E:\mygithub\software)
+2024-09-16 23:11:55.340 [restartedMain] DEBUG priv.jesse.mall.MallApplication - Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+2024-09-16 23:11:55.341 [restartedMain] INFO  priv.jesse.mall.MallApplication - The following profiles are active: local
+2024-09-16 23:11:55.413 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.3.5.Final
+2024-09-16 23:11:56.379 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2024-09-16 23:11:56.380 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.23
+2024-09-16 23:11:56.439 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/mall] - Initializing Spring embedded WebApplicationContext
+2024-09-16 23:11:57.080 [restartedMain] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2024-09-16 23:11:57.106 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.0.12.Final}
+2024-09-16 23:11:57.106 [restartedMain] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2024-09-16 23:11:57.107 [restartedMain] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+2024-09-16 23:11:57.168 [restartedMain] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2024-09-16 23:11:57.726 [restartedMain] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2024-09-16 23:11:57.731 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2024-09-16 23:11:57.901 [restartedMain] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate - HHH000228: Running hbm2ddl schema update
+2024-09-16 23:11:58.947 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2024-09-16 23:11:58.951 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2024-09-16 23:11:58.957 [restartedMain] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2024-09-16 23:11:58.969 [restartedMain] INFO  priv.jesse.mall.MallApplication - Started MallApplication in 3.75 seconds (JVM running for 4.56)
+2024-09-16 23:12:02.004 [Thread-14] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2024-09-16 23:18:05.182 [restartedMain] INFO  priv.jesse.mall.MallApplication - Starting MallApplication on LAPTOP-OAFG8JQ2 with PID 13432 (E:\mygithub\software\target\classes started by abandon in E:\mygithub\software)
+2024-09-16 23:18:05.183 [restartedMain] DEBUG priv.jesse.mall.MallApplication - Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+2024-09-16 23:18:05.184 [restartedMain] INFO  priv.jesse.mall.MallApplication - The following profiles are active: local
+2024-09-16 23:18:05.260 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.3.5.Final
+2024-09-16 23:18:06.233 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2024-09-16 23:18:06.233 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.23
+2024-09-16 23:18:06.292 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/mall] - Initializing Spring embedded WebApplicationContext
+2024-09-16 23:18:06.960 [restartedMain] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2024-09-16 23:18:06.989 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.0.12.Final}
+2024-09-16 23:18:06.989 [restartedMain] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2024-09-16 23:18:06.990 [restartedMain] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+2024-09-16 23:18:07.063 [restartedMain] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2024-09-16 23:18:07.766 [restartedMain] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2024-09-16 23:18:07.772 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2024-09-16 23:18:07.980 [restartedMain] INFO  org.hibernate.tool.hbm2ddl.SchemaUpdate - HHH000228: Running hbm2ddl schema update
+2024-09-16 23:18:09.036 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2024-09-16 23:18:09.040 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2024-09-16 23:18:09.046 [restartedMain] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2024-09-16 23:18:09.057 [restartedMain] INFO  priv.jesse.mall.MallApplication - Started MallApplication in 4.002 seconds (JVM running for 4.857)
+2024-09-16 23:18:11.647 [http-nio-8081-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/mall] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2024-09-16 23:18:11.732 [http-nio-8081-exec-1] INFO  org.thymeleaf.TemplateEngine - [THYMELEAF] INITIALIZING TEMPLATE ENGINE
+2024-09-16 23:18:11.756 [http-nio-8081-exec-1] INFO  org.thymeleaf.templateresolver.AbstractTemplateResolver - [THYMELEAF] INITIALIZING TEMPLATE RESOLVER: org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver
+2024-09-16 23:18:11.756 [http-nio-8081-exec-1] INFO  org.thymeleaf.templateresolver.AbstractTemplateResolver - [THYMELEAF] TEMPLATE RESOLVER INITIALIZED OK
+2024-09-16 23:18:11.757 [http-nio-8081-exec-1] INFO  org.thymeleaf.messageresolver.AbstractMessageResolver - [THYMELEAF] INITIALIZING MESSAGE RESOLVER: org.thymeleaf.spring4.messageresolver.SpringMessageResolver
+2024-09-16 23:18:11.757 [http-nio-8081-exec-1] INFO  org.thymeleaf.messageresolver.AbstractMessageResolver - [THYMELEAF] MESSAGE RESOLVER INITIALIZED OK
+2024-09-16 23:18:11.759 [http-nio-8081-exec-1] INFO  org.thymeleaf.TemplateEngine.CONFIG - [THYMELEAF] TEMPLATE ENGINE CONFIGURATION:
+[THYMELEAF] * Cache Factory implementation: org.thymeleaf.cache.StandardCacheManager
+[THYMELEAF] * Template modes:
+[THYMELEAF]     * VALIDXML
+[THYMELEAF]     * LEGACYHTML5
+[THYMELEAF]     * VALIDXHTML
+[THYMELEAF]     * XHTML
+[THYMELEAF]     * XML
+[THYMELEAF]     * HTML5
+[THYMELEAF] * Template resolvers (in order):
+[THYMELEAF]     * org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver
+[THYMELEAF] * Message resolvers (in order):
+[THYMELEAF]     * org.thymeleaf.spring4.messageresolver.SpringMessageResolver
+[THYMELEAF] * Dialect [1 of 2]: org.thymeleaf.spring4.dialect.SpringStandardDialect
+[THYMELEAF]     * Prefix: "th"
+[THYMELEAF] * Dialect [2 of 2]: nz.net.ultraq.thymeleaf.LayoutDialect
+[THYMELEAF]     * Prefix: "layout"
+[THYMELEAF] TEMPLATE ENGINE CONFIGURED OK
+2024-09-16 23:18:11.759 [http-nio-8081-exec-1] INFO  org.thymeleaf.TemplateEngine - [THYMELEAF] TEMPLATE ENGINE INITIALIZED
+2024-09-16 23:18:12.063 [http-nio-8081-exec-1] INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2024-09-16 23:36:43.386 [Thread-15] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
